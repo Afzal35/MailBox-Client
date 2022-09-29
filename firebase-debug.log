@@ -1,0 +1,30 @@
+[debug] [2022-09-28T04:10:55.855Z] ----------------------------------------------------------------------
+[debug] [2022-09-28T04:10:55.858Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\afzal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-09-28T04:10:55.858Z] CLI Version:   11.11.0
+[debug] [2022-09-28T04:10:55.858Z] Platform:      win32
+[debug] [2022-09-28T04:10:55.859Z] Node Version:  v16.14.2
+[debug] [2022-09-28T04:10:55.860Z] Time:          Wed Sep 28 2022 09:40:55 GMT+0530 (India Standard Time)
+[debug] [2022-09-28T04:10:55.860Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-28T04:10:55.917Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-28T04:10:55.918Z] > authorizing via signed-in user (afzalalam9555@gmail.com)
+[debug] [2022-09-28T04:10:55.918Z] [iam] checking project mailbox2210 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-09-28T04:10:55.920Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mailbox2210:testIamPermissions [none]
+[debug] [2022-09-28T04:10:55.920Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mailbox2210:testIamPermissions x-goog-quota-user=projects/mailbox2210
+[debug] [2022-09-28T04:10:55.920Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mailbox2210:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-09-28T04:10:58.258Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mailbox2210:testIamPermissions 200
+[debug] [2022-09-28T04:10:58.258Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mailbox2210:testIamPermissions {}
+[debug] [2022-09-28T04:10:58.258Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project mailbox2210:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-09-28T04:10:58.259Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mailbox2210 [none]
+[debug] [2022-09-28T04:10:59.280Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mailbox2210 403
+[debug] [2022-09-28T04:10:59.281Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mailbox2210 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-09-28T04:10:59.283Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-09-28T04:10:59.621Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\afzal\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\afzal\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project mailbox2210. Please make sure the project exists and your account has permission to access it.
